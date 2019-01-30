@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>阅读标注</title>
+	<style>
+	 *{ padding:0; margin:0; }
+	 li{
+	 	list-style-type:none;
+	 	padding-left: 40px;
+	 }
+	 a {
+		text-decoration: none;
+		font-size: 16px;
+	}
+	#title{font-size:28px;
+		padding-top:2px;
+		color: white;
+		margin-left: 20px;
+	}
+	#header{ position:fixed;
+		width:100%;
+		height:50px;
+		background: #242424;
+		text-align: center;
+		padding-top: 1px;
+	}
+	#middle{ width:100%;
+		height:100%;
+		background: #DBDBDB;
+		margin: 0 auto;
+		padding-top: 65px;
+	}
+	#tag{
+		height:40px;
+		font-size: 24px;
+		padding-left:20px;
+		color:blue;
+	}
+	.float_l{
+		float:left;
+	}
+	#inp_text{
+		margin-left: 20px;
+	    width:500px;
+	    height:30px;
+	    border:1px;
+	    border-radius:5px;
+	}
+	#inp_sub{
+	    width:20px;
+	    height:30px;
+	    border:1px;
+	    background-color:orange;
+	    border-radius:5px;
+		margin-top: 10px;
+	}
+	</style>
+</head>
+<script type="text/javascript">
+
+window.onload= function(){
+	var oPtxt=document.getElementById("p1");
+	var oBtn1=document.getElementById("Btn1");
+	var oBtn2=document.getElementById("Btn2");
+	var num = 14; /*定义一个初始变量*/
+	oBtn1.onclick = function(){
+		num++;
+		oPtxt.style.fontSize=num+'px';
+	};
+	oBtn2.onclick = function(){
+		num--;
+		oPtxt.style.fontSize=num+'px';
+	}
+}
+
+function over(obj){
+	obj.style.backgroundColor="blue";
+	obj.style.color="white";
+}
+function out(obj){
+	obj.style.backgroundColor="goldenrod";
+	obj.style.color="";
+}
+
+function tourl(ids){
+	window.location.href="label?file={{ file }}&id="+ids;
+}
+function toindex(){
+	window.location.href="index";
+}
+
+function torelable(){
+	window.location.href="relabel";
+}
+</script>
+<body>
+		<div id="header" class = "float_l"><span id="title" class = "float_l">阅读标注</span></div>
+		<div id="middle" class = "float_l">
+			<div class = "float_r" style="font-size:18px;width:200px; background-color: goldenrod" onmousemove="over(this);" onmouseout="out(this);" onclick="toindex()">返回首页</div>
+			<table>
+				<tr><td>总数量:</td><td>{{total}}</td></tr>
+				{% for k,v in count_res.items() %}
+					<tr><td>{{ label_data["two_id2name"][k] }}</td><td>{{ v }}</td></tr>
+				{% endfor %}
+			</table>
+			<hr>
+			{% if undeal["num"]>0 %}
+						<div class = "float_r" style="font-size:18px;width:200px; background-color: goldenrod" onmousemove="over(this);" onmouseout="out(this);" onclick="torelable()">一键导回data重标</div>
+				<table>
+					<tr><td>未标上数量:</td><td>{{undeal["num"]}}</td></tr>
+					{% for file in undeal["name"] %}
+						<tr><td>未标上文件:</td><td>{{ file }}</td></tr>
+					{% endfor %}
+				</table>
+			{% endif %}
+
+		</div>
+
+</body>
+</html>

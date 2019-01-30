@@ -1,0 +1,100 @@
+Grammatical problem: unnecessary 'more/most'	 语法问题：不必要的“更多/最多” 
+Commonly confused word	常见混淆词
+Possible wordiness	 可能的冗长 
+Possible agreement error	可能的协议错误
+Grammatical problem: missing 'the'	语法问题：缺少'the' 
+Probable usage error.	可能的使用错误。 
+Uncountable noun with an article	带冠词的不可数名词
+Spurious comma	伪逗号
+Grammatical problem: unnecessary 'more'	语法问题：不必要的“更多”
+Redundant phrase	多余短语
+Grammatical problem: use 'the'	语法问题：使用“the”
+Missing preposition	缺少介词
+Grammatical problem: missing 'to'	语法问题：缺少“to”
+Grammatical problem: use 'as'	语法问题：使用“as”
+Possible redundancy	可能的冗余
+Probable typo	可能错字
+Grammatical problem: use gerund	语法问题：使用动名词
+Grammatical problem: use a plural noun	语法问题：使用复数名词
+Missing hyphen: languages	缺少连字符：语言
+Grammatical problem: unnecessary 'a'	语法问题：不必要的“a”
+Missing punctuation	缺少标点符号
+Possible grammatical problem: do not use the progressive	可能的语法问题：不要使用渐进式
+Spelling mistake	拼写错误
+SI units, plural adjectives	国际单位制，复数形容词
+Punctuation error, sentence looks like a fragment	标点错误，句子看起来像一个片段
+Grammatical problem: use the infinitive	语法问题：使用不定式
+Grammatical problem: unnecessary 'to'	语法问题：不必要的“to”
+Grammatical problem: use 'than'	语法问题：使用“than”
+Agreement error	协议错误
+Grammatical problem: missing determiner	语法问题：缺少限定词
+Grammatical problem: non-standard comparative/superlative	语法问题：非标准比较/最高级
+Grammatical problem or typo	语法问题或打字错误
+Word repetition	单词重复
+Grammatical problem: remove 'of'	语法问题：删除“of”
+Missing hyphen	丢失连字符
+Profanity	亵渎神明
+Grammatical problem: agreement error	语法问题：协议错误
+Apostrophe in a decade date	十年前的撇号
+AmE/BrE: SI units (adjectives)	ame/bre:si单位（形容词）
+Grammatical problem with uncountable noun	不可数名词的语法问题
+Redundant determiner	冗余限定符
+Non-standard phrase	非标准短语
+Possibly confused word	可能混淆的词
+Grammatical problem: use a noun	语法问题：使用名词
+Negation after negation	否定后的否定
+Grammatical problem	语法问题
+Awkward style	尴尬风格
+Possible redundant phrase	可能的重复短语
+Punctuation error	标点错误
+Three successive sentences begin with the same word.	三个连续的句子以同一个词开头。
+Possible typo	可能的键入
+Missing article	缺失冠词
+Duplicated 'the'	复制了“the”
+Missing hyphens	丢失连字符
+Spurious apostrophe	伪撇号
+Nonstandard phrase	非标准短语
+Possible grammar error	可能的语法错误
+Grammar error	语法错误
+Grammatical problem: unnecessary 'most'	语法问题：不必要的“大多数”
+Wrong phrase	错误短语
+Two successive sentences begin with the same adverb.	两个连续的句子以同一个副词开头。
+Missing comma	缺少逗号
+Use smart quotes	使用智能引号
+Grammatical problem: missing plural noun	语法问题：缺少复数名词
+'Also' at the end of sentence	句末“also”
+Grammatical problem: non-standard "don't"	语法问题：非标准的“不要”
+Grammatical problem: incorrect modal verb	语法问题：不正确的情态动词
+Grammatical problem: use 'this'	语法问题：使用“this”
+Grammatical problem with countable noun	可数名词的语法问题
+Two consecutive dots	两个连续点
+Grammatical problem: use 'these'	语法问题：使用“these”
+Comma misuse	逗号误用
+Wrong collocation	错误的搭配
+Missing definite article	漏掉定冠词
+Confused word	混淆词
+Duplicated phrase	重复短语
+Grammatical problem: use 'all'	语法问题：使用“all”
+Possible grammatical error	可能的语法错误
+Possible punctuation error, sentence looks like a fragment	可能是标点错误，句子看起来像一个片段
+Grammatical problem: use 'ing'	语法问题：使用“ing”
+Grammatical problem: incorrect pronoun	语法问题：代词不正确
+Possibly bad style	可能是不好的风格
+Grammatical problem: missing verb	语法问题：缺少动词
+Collocation error	并置错误
+Two consecutive articles	连续两个冠词
+Potentially missing comma	可能缺少逗号
+Hyphenation problem	断字问题
+Grammatical problem: use the base form	语法问题：使用基本形式
+Bad style	不良风格
+Wrong article	冠词错误
+Use the extreme adjective instead.	用极端形容词代替。
+Extraneous apostrophe	外撇号
+Add metric equivalent?	是否添加公制等效值？
+Grammatical problem: equally as	语法问题：与
+Incorrect phrase	不正确的短语
+Grammatical error	语法错误
+Grammatical problem: incorrect adverb	语法问题：副词不正确
+Grammatical problem: unnecessary article	语法问题：不必要的冠词
+Grammatical problem: word order	语法问题：词序
+Grammatical problem: unnecessary 'a/an'	语法问题：不必要的“a/an”

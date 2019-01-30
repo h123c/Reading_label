@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>阅读标注</title>
+	<style>
+	 *{ padding:0; margin:0; }
+	 li{
+	 	list-style-type:none;
+	 	padding-left: 40px;
+	 }
+	 a {
+		text-decoration: none;
+		font-size: 16px;
+	}
+	#title{font-size:28px;
+		padding-top:2px;
+		color: white;
+		margin-left: 20px;
+	}
+	#header{ position:fixed;
+		width:100%;
+		height:50px;
+		background: #242424;
+		text-align: center;
+		padding-top: 1px;
+	}
+	#middle{ width:100%;
+		height:100%;
+		background: #DBDBDB;
+		margin: 0 auto;
+		padding-top: 65px;
+	}
+	#tag{
+		height:40px;
+		font-size: 24px;
+		padding-left:20px;
+		color:blue;
+	}
+	.float_l{
+		float:left;
+	}
+	.float_r{
+		float:right;
+	}
+	#inp_text{
+		margin-left: 20px;
+	    width:500px;
+	    height:30px;
+	    border:1px;
+	    border-radius:5px;
+	}
+	#inp_sub{
+	    width:20px;
+	    height:30px;
+	    border:1px;
+	    background-color:orange;
+	    border-radius:5px;
+		margin-top: 10px;
+	}
+	</style>
+</head>
+<script type="text/javascript">
+
+window.onload= function(){
+	var oPtxt=document.getElementById("p1");
+	var oBtn1=document.getElementById("Btn1");
+	var oBtn2=document.getElementById("Btn2");
+	var num = 14; /*定义一个初始变量*/
+	oBtn1.onclick = function(){
+		num++;
+		oPtxt.style.fontSize=num+'px';
+	};
+	oBtn2.onclick = function(){
+		num--;
+		oPtxt.style.fontSize=num+'px';
+	}
+}
+
+function over(obj){
+	obj.style.backgroundColor="#66b3ff";
+	obj.style.color="white";
+}
+function out(obj){
+	obj.style.backgroundColor="darkgrey";
+	obj.style.color="";
+}
+
+function tourl(ids){
+	window.location.href="label?file={{ file }}&id="+ids;
+}
+function toindex(){
+	window.location.href="index";
+}
+</script>
+<body>
+		<div id="header" class = "float_l"><span id="title" class = "float_l">阅读标注</span></div>
+		<div id="middle" class = "float_l">
+			<div class = "float_l">
+				<span id="tag" class = "float_l">文章:</span>
+				<input id="Btn1" style="width:35px;height:35px" type="button" value="+" name=""/>
+				<input id="Btn2" style="width:35px;height:35px" type="button" value="-" name=""/>
+				{% if file %}{{ file }}{% else %}{% endif %}<br>
+					<form action="get_essay" class = "float_l" method="post">
+                            <div style="border:solid 3px darkgrey;overflow-y:scroll;height:830px;background-color: whitesmoke" id ="inp_text"><p id = "p1" style="font-size:22px;font-family:STSong ;">{% if txt %}{{ txt }}{% else %}{% endif %}<p></div><br>
+					</form>
+			</div>
+			<div class = "float_l" style="padding-top: 100px;margin-left:">
+				<a href="change?type=pre&file={{ file }}"><div onmousemove="over(this);" onmouseout="out(this);" style="width:65px;height:40px;background-color: darkgrey;margin:4px 7px;font-size: 20px">上一篇</div></a>
+				<div style="width:60px;height:50px;background-color: darkgrey;margin:4px 7px;">剩余:<br>{% if file_num %}{{ file_num }}{% else %}{% endif %}</div>
+				<a href="change?type=next&file={{ file }}"><div onmousemove="over(this);" onmouseout="out(this);" style="width:65px;height:40px;background-color: darkgrey;margin:4px 7px;font-size: 20px">下一篇</div></a>
+				<a href="count"> <div style="width:60px;height:50px;background-color: darkgrey;margin:4px 7px;" onmousemove="over(this);" onmouseout="out(this);">统计已<br>标数据</div></a>
+			</div>
+
+			<div class = "float_l" style = "width:900px;">
+				<span id="tag" class = "float_l">类别:</span>
+
+				<div class = "float_r" style="font-size:18px;" onmousemove="over(this);" onmouseout="out(this);" onclick="toindex()">返回首页</div>
+				<div class = "float_l" style="border:solid 3px darkgrey;overflow-y:scroll;height:830px;background-color: whitesmoke">
+				<table class = "float_l">
+					<tr>
+					{% for twoname in label_data["name_list2"] %}
+						<td style="background-color: goldenrod">{{ twoname }}</td>
+					{% endfor %}
+					</tr>
+
+					{% for line in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14] %}
+					<tr style="height: 10px">
+						{% for id in label_data["id_list2"] %}
+							{% if label_data["two_include"][id][line] %}
+
+								<td  style="width:60px;background-color: darkgrey" onclick="tourl( {{ label_data['two_include'][id][line] }} )" onmousemove="over(this);" onmouseout="out(this);">
+									<div >{{ label_data["three_id2name"][label_data["two_include"][id][line]] }}</div>
+								</td>
+
+
+							{% else %}
+								<td>{{ "" }}</td>
+			                {% endif %}
+						{% endfor %}
+					</tr>
+					{% endfor %}
+
+				</table>
+				</div>
+			</div>
+
+		</div>
+
+</body>
+</html>
